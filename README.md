@@ -2,6 +2,17 @@
 
 Projet d'apprentissage du web scraping utilisant BeautifulSoup4 et Playwright pour l'extraction de données web.
 
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/Lucas-tsl/scrapping-python-period.git
+cd scrapping-python-period
+./setup.sh  # Configuration automatique
+
+# OU directement
+python3 main.py  # Vue d'ensemble du projet
+```
+
 ## Technologies
 
 - **Python 3.9+**
@@ -9,45 +20,78 @@ Projet d'apprentissage du web scraping utilisant BeautifulSoup4 et Playwright po
 - **Requests** - Requêtes HTTP
 - **Playwright** - Automatisation navigateur
 
-## Installation
+## 📁 Structure du Projet
 
-```bash
-pip3 install requests beautifulsoup4 playwright
-python3 -m playwright install
+```
+scrapping-python-period/
+├── src/                    # Code source organisé
+├── examples/               # Exemples d'utilisation
+├── tests/                  # Tests unitaires
+├── docs/                   # Documentation détaillée
+├── requirements.txt        # Dépendances Python
+├── setup.sh               # Script de configuration
+└── README.md              # Ce fichier
 ```
 
-## Fonctionnalités
+## 🛠️ Installation
 
-- Parsing de fichiers HTML locaux
-- Extraction de données depuis des sites web
-- Contournement des protections anti-bot
-- Automatisation de navigateur pour contenu dynamique
-- Gestion des erreurs SSL et urllib3
-
-## Scripts Disponibles
-
-| Script | Description |
-|--------|-------------|
-| `main.py` | Parsing HTML local de base |
-| `searchInfo-toscrapp.py` | Extraction d'informations produits |
-| `all-book-info.py` | Scraping complet avec détails |
-| `simulation.py` | Gestion des protections web |
-| `auto.py` | Automatisation avec Playwright |
-
-## Utilisation
-
+### Méthode rapide
 ```bash
-python3 <nom_du_script>.py
+./setup.sh
 ```
 
-## Compétences Développées
+### Méthode manuelle
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m playwright install
+```
+
+Voir [docs/INSTALLATION.md](docs/INSTALLATION.md) pour plus de détails.
+
+## 📖 Utilisation
+
+### Scripts d'apprentissage
+```bash
+python main.py                    # Parsing HTML local
+python searchInfo-toscrapp.py     # Extraction simple
+python all-book-info.py           # Scraping complet
+```
+
+### Exemples modernes
+```bash
+python examples/modern_scraping.py
+```
+
+### Tests
+```bash
+python -m pytest tests/ -v
+```
+
+## 🎯 Compétences Développées
 
 - Navigation dans l'arbre DOM HTML
 - Sélection d'éléments par classes CSS
 - Extraction et nettoyage de données
 - Gestion des requêtes HTTP avec headers
 - Automatisation de navigateur web
-- Résolution de problèmes de compatibilité SSL
+- Tests unitaires et bonnes pratiques
+- Structure de projet professionnel
+
+## 📚 Documentation
+
+- [Installation détaillée](docs/INSTALLATION.md)
+- [Exemples d'utilisation](examples/)
+- [Tests](tests/)
+
+## 🤝 Contribution
+
+1. Fork le projet
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Commit (`git commit -m 'Add some AmazingFeature'`)
+4. Push (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
 
 ---
 
