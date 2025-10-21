@@ -1,54 +1,54 @@
-# 🕷️ Web Scraping avec Python
+# Web Scraping avec Python
 
-Projet simple pour apprendre le web scraping avec Python, BeautifulSoup et Requests.
+Projet d'apprentissage du web scraping utilisant BeautifulSoup4 et Playwright pour l'extraction de données web.
 
-## 📦 Installation
+## Technologies
+
+- **Python 3.9+**
+- **BeautifulSoup4** - Parsing HTML statique
+- **Requests** - Requêtes HTTP
+- **Playwright** - Automatisation navigateur
+
+## Installation
 
 ```bash
-pip3 install requests beautifulsoup4
+pip3 install requests beautifulsoup4 playwright
+python3 -m playwright install
 ```
 
-## 🚀 Utilisation
+## Fonctionnalités
+
+- Parsing de fichiers HTML locaux
+- Extraction de données depuis des sites web
+- Contournement des protections anti-bot
+- Automatisation de navigateur pour contenu dynamique
+- Gestion des erreurs SSL et urllib3
+
+## Scripts Disponibles
+
+| Script | Description |
+|--------|-------------|
+| `main.py` | Parsing HTML local de base |
+| `searchInfo-toscrapp.py` | Extraction d'informations produits |
+| `all-book-info.py` | Scraping complet avec détails |
+| `simulation.py` | Gestion des protections web |
+| `auto.py` | Automatisation avec Playwright |
+
+## Utilisation
 
 ```bash
-python3 main.py
+python3 <nom_du_script>.py
 ```
 
-## 📁 Fichiers
+## Compétences Développées
 
-- `main.py` - Script de scraping principal
-- `index.html` - Fichier HTML d'exemple pour tester
-
-## 💡 Exemple de base
-
-```python
-import requests
-from bs4 import BeautifulSoup
-
-# Récupérer une page web
-url = "http://quotes.toscrape.com/"
-response = requests.get(url)
-
-# Parser le HTML
-soup = BeautifulSoup(response.content, 'html.parser')
-
-# Extraire des données
-titre = soup.find('title').text
-print(titre)
-```
-
-## 📚 Ressources utiles
-
-- [Documentation Requests](https://requests.readthedocs.io/)
-- [Documentation BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- [Quotes to Scrape](http://quotes.toscrape.com/) - Site pour pratiquer
-
-## ⚠️ Bonnes pratiques
-
-- Vérifiez le fichier `robots.txt` des sites
-- Respectez les délais entre les requêtes
-- Ne surchargez pas les serveurs
+- Navigation dans l'arbre DOM HTML
+- Sélection d'éléments par classes CSS
+- Extraction et nettoyage de données
+- Gestion des requêtes HTTP avec headers
+- Automatisation de navigateur web
+- Résolution de problèmes de compatibilité SSL
 
 ---
 
-Made by [@Lucas-tsl](https://github.com/Lucas-tsl)
+*Projet éducatif - Lucas TSL*
