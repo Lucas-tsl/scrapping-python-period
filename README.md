@@ -19,6 +19,7 @@ python3 main.py  # Vue d'ensemble du projet
 - **BeautifulSoup4** - Parsing HTML statique
 - **Requests** - Requêtes HTTP
 - **Playwright** - Automatisation navigateur
+- **Regex** - Recherche de motifs dans le texte
 
 ## 📁 Structure du Projet
 
@@ -52,9 +53,14 @@ Voir [docs/INSTALLATION.md](docs/INSTALLATION.md) pour plus de détails.
 
 ## 📖 Utilisation
 
-### Scripts d'apprentissage
+### Scripts principaux
 ```bash
 python main.py                    # Parsing HTML local
+python src/airbnb-scrapper.py     # Scrapping Airbnb avec Playwright
+```
+
+### Scripts d'apprentissage (legacy)
+```bash
 python searchInfo-toscrapp.py     # Extraction simple
 python all-book-info.py           # Scraping complet
 ```
@@ -62,6 +68,8 @@ python all-book-info.py           # Scraping complet
 ### Exemples modernes
 ```bash
 python examples/modern_scraping.py
+python examples/clean_scraping.py
+python examples/simple_scraping.py
 ```
 
 ### Tests
@@ -72,12 +80,30 @@ python -m pytest tests/ -v
 ## 🎯 Compétences Développées
 
 - Navigation dans l'arbre DOM HTML
-- Sélection d'éléments par classes CSS
+- Sélection d'éléments par classes CSS, ID, et attributs de test
 - Extraction et nettoyage de données
 - Gestion des requêtes HTTP avec headers
-- Automatisation de navigateur web
+- Automatisation de navigateur web avec Playwright
+- Interaction avec des éléments web (clic, remplissage de formulaires)
+- Utilisation de regex pour la sélection d'éléments dynamiques
+- Gestion des timeouts et attentes dans l'automatisation
 - Tests unitaires et bonnes pratiques
 - Structure de projet professionnel
+
+## 🔧 Fonctionnalités
+
+### Scrapper Airbnb (`src/airbnb-scrapper.py`)
+- Automatisation complète d'une recherche Airbnb
+- Gestion des cookies et consentements
+- Recherche par localisation avec dates spécifiques
+- Application de filtres avancés (type de logement, chambres, lits)
+- Extraction des noms de propriétés
+- Utilisation de différentes méthodes de sélection Playwright :
+  - Sélection par rôle (`get_by_role`)
+  - Sélection par ID (`locator`)
+  - Sélection par texte (`get_by_text`)
+  - Sélection par test-id (`get_by_test_id`)
+  - Utilisation de regex pour les éléments dynamiques
 
 ## 📚 Documentation
 
